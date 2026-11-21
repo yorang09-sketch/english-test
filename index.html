@@ -6,10 +6,12 @@
   <meta name="theme-color" content="#f6f7f2">
   <title>Word Garden — 영어 단어장</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
   <script src="app.js" defer></script>
 </head>
 <body>
-  <div class="app-shell">
+  <div class="app-shell" hidden>
     <aside class="sidebar">
       <a class="brand" href="#home" aria-label="Word Garden 홈"><span class="brand-mark">W</span><span>word<span class="brand-light">garden</span></span></a>
       <div class="side-label">MENU</div>
@@ -60,6 +62,6 @@
       <footer class="footer"><span>WORD GARDEN</span><span>Made for your next little win <b>✳</b></span></footer>
     </main>
   </div>
-  <div class="modal-backdrop hidden" id="word-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><form class="modal" id="word-form"><button type="button" class="modal-close" id="modal-close" aria-label="닫기">×</button><div class="eyebrow"><span class="eyebrow-line"></span> MY WORD LIST</div><h2 id="modal-title">새 단어 추가</h2><p class="modal-help">단어와 뜻을 입력해 나만의 단어장을 채워보세요.</p><input type="hidden" id="edit-id"><label for="word-en">영어 단어</label><input id="word-en" required maxlength="60" placeholder="예: curious"><label for="word-ko">뜻</label><input id="word-ko" required maxlength="100" placeholder="예: 호기심이 많은"><label for="word-example">예문 <span>(선택)</span></label><input id="word-example" maxlength="180" placeholder="예: She is curious about the world."><div class="modal-actions"><button type="button" class="secondary-btn" id="cancel-word">취소</button><button class="primary-btn" type="submit">저장하기 <span>→</span></button></div></form></div>
+  <div class="modal-backdrop hidden" id="word-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><form class="modal" id="word-form"><button type="button" class="modal-close" id="modal-close" aria-label="닫기">×</button><div class="eyebrow"><span class="eyebrow-line"></span> MY WORD LIST</div><h2 id="modal-title">새 단어 추가</h2><p class="modal-help">단어와 뜻을 입력해 나만의 단어장을 채워보세요.</p><input type="hidden" id="edit-id"><label for="word-en">영어 단어</label><input id="word-en" required maxlength="60" placeholder="예: curious"><label for="word-ko">뜻</label><input id="word-ko" required maxlength="100" placeholder="예: 호기심이 많은"><div class="modal-actions"><button type="button" class="secondary-btn" id="cancel-word">취소</button><button class="primary-btn" type="submit">저장하기 <span>→</span></button></div></form></div>
 </body>
 </html>
